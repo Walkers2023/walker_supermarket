@@ -1,5 +1,6 @@
 import React from 'react'
 import { Logo, Pl1 } from '../../Assets/Assets'
+import { Link, NavLink } from 'react-router-dom'
 
 // const Navbar = () => {
 //   return (
@@ -28,7 +29,7 @@ const Navbar = () => {
       <section className=' bg-white w-full h-14 flex flex-row items-center justify-between px-10 gap-10 '>
       {/* Brand Logo */}
         <a href='https://walkerssupermarket.co.uk/' className='h-16'>
-          <img src={Logo} alt='Walker Supermarket' className=' object-contain w-full h-full'/>
+          <img src={Logo} alt='Walker Supermarket' className='object-contain w-full h-full'/>
         </a>
         {/* Placeholder Navigation Bar */}
         {/* <div className=' w-full  h-max flex items-center justify-end '>
@@ -37,19 +38,22 @@ const Navbar = () => {
         <nav className='flex gap-80 font-poppins'>
           <div className='flex'>
             <ul className='flex gap-6 font-semibold'>
-              <li><button>Home</button></li>
-              <li><button>Shop</button></li>
-              <li><button>British Brands</button></li>
-              <li><button>Subscription and Rewards</button></li>
-              <li><button>Contact Us</button></li>
+            <NavLink>
+
+              <li className='hover:bg-slate-400 p-4' ><button>Home</button></li>
+            </NavLink>
+              <li className='hover:bg-slate-400 p-4'><button>Shop</button></li>
+              <li className='hover:bg-slate-400 p-4'><button>British Brands</button></li>
+              <li className='hover:bg-slate-400 p-4'><button>Subscription and Rewards</button></li>
+              <li className='hover:bg-slate-400 p-4'><button>Contact Us</button></li>
             </ul>
           </div>
           <div>
             <ul className='flex gap-6 font-semibold'>
-              <li>icon</li>
-              <li>icon</li>
-              <li>icon</li>
-              <li>icon</li>
+              <li className='hover:bg-slate-400 p-4'><button>icon</button></li>
+              <li className='hover:bg-slate-400 p-4'><button>icon</button></li>
+              <li className='hover:bg-slate-400 p-4'><button>icon</button></li>
+              <li className='hover:bg-slate-400 p-4'><button>icon</button></li>
             </ul>
           </div>
         </nav>

@@ -40,7 +40,6 @@ const Sidebar = ({children}) => {
     return (
         <main className=' main-container'>
         {/* Sidebar */}
-
             {/* Desktop and tablet Screen */}
             <aside className={`sidebar ${open ? " w-300 px-3 py-10" : " w-20 px-3 py-10"}`}>
                 <section className=' w-full h-10 '>
