@@ -34,8 +34,6 @@ const MealPlanner = () => {
     { value: "Dinner", label: "Dinner" },
   ];
 
-  // Testing Git
-
   // Functions
   const handleChange = (e, name) => {
     setMealData({
