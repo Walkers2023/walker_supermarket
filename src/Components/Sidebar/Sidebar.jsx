@@ -7,6 +7,7 @@ import {
   HiOutlineUser,
   HiOutlineUserGroup,
 } from "react-icons/hi";
+import rightArrow from "../../Assets/icons/arrow -right.svg";
 import { BsHeartPulse } from "react-icons/bs";
 import { Link, NavLink } from "react-router-dom";
 
@@ -48,7 +49,11 @@ const Sidebar = ({ children }) => {
 
       {/* Desktop and tablet Screen */}
       <aside
-        className={`sidebar ${open ? " w-300 px-3 py-10" : " w-20 px-3 py-10"}`}
+        className={`sidebar ${
+          open
+            ? " w-300 px-3 py-10 transform duration-200"
+            : " w-20 px-3 py-10 transform duration-200"
+        }`}
       >
         <section className=" w-full h-10 ">
           <h3
@@ -59,10 +64,13 @@ const Sidebar = ({ children }) => {
             Hello, User
           </h3>
           <div
-            className={`open-close ${!open && " rotate-180"}`}
+            className={`open-close rotate-180 ${
+              !open && "transform rotate-[360deg] duration-200"
+            }`}
             onClick={() => setOpen(!open)}
           >
-            <HiChevronLeft fontSize={"50px"} />
+            {/* <HiChevronLeft fontSize={"50px"} /> */}
+            <img src={rightArrow} alt="right-arrow" className="h-[30px]" />
           </div>
         </section>
         <section className=" flex w-full h-full flex-col justify-between gap-5  items-start self-stretch">
