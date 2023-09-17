@@ -10,13 +10,13 @@ const SelectInput = ({
   value,
 }) => {
   return (
-    <div className=" w-full relative">
-      <p className="pb-[0.5rem] font-bold text-[0.9rem]">{label}</p>
+    <div className="w-full relative">
+      <p className="pb-[0.5rem] font-bold text-[0.9rem]">{placeholder}</p>
 
       <select
         value={value}
         onChange={handleChange}
-        className={`${className} cursor-pointer `}
+        className={`${className} cursor-pointer text-sm `}
         placeholder={placeholder}
         required
       >
@@ -33,7 +33,7 @@ const SelectInput = ({
       <img
         src={dropDownImg}
         alt="drop-down"
-        className=" h-[13px] md:h-[14px] bg-contain absolute top-1/2 translate-y-[0.3rem] right-[1.5rem] "
+        className=" h-[13px] md:h-[14px] bg-contain absolute bottom-[1.4rem] right-[1.5rem] "
       />
     </div>
   );

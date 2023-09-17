@@ -84,6 +84,7 @@ const Aform = () => {
 
         <Select
           className={`select w-full  ${!genders && "text-textColor"} `}
+          placeholder={`Select Gender`}
           label="Gender"
           options={genders}
           handleChange={(e) => handleGenderSelectChange(e, "gender")}
@@ -91,6 +92,7 @@ const Aform = () => {
           value={gender.gender}
         />
         <Select
+          placeholder={`Select Race`}
           className={`select w-full  ${!races && "text-textColor"} `}
           label="Ethnic Race"
           options={races}
