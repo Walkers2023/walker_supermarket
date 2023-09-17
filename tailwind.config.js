@@ -10,6 +10,9 @@ module.exports = {
         "2xl": "1536px",
         // => @media (min-width: 1536px) { ... }
       },
+      boxShadow: {
+        "header-shadow": "0 2px 8px 0px rgba(0, 0, 0, 0.1)",
+      },
       colors: {
         primary: "#F9C802",
         secondary: "#202A36",

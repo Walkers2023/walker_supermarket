@@ -77,7 +77,7 @@ const AddForm = () => {
     >
       {/* First Address Box */}
       <div className="w-full h-fit mt-5 flex flex-col gap-6 items-start">
-        <div className=" w-full h-12.5 bg-grad px-5 flex items-center text-white ">
+        <div className=" w-full h-12.5 bg-grad px-5 flex items-center rounded-lg text-white ">
           <h1 className="text-xl font-medium">Address one :</h1>
         </div>
         <div className="w-full flex flex-col gap-6">
@@ -145,7 +145,7 @@ const AddForm = () => {
       </div>
       {/* Second Address Box */}
       <div className="w-full h-fit flex flex-col gap-6 items-start">
-        <div className=" w-full h-12.5 bg-grad px-5 flex items-center text-white ">
+        <div className=" w-full h-12.5 bg-grad px-5 flex items-center rounded-lg text-white ">
           <h1 className="text-xl font-medium">Address Two :</h1>
         </div>
         <div className="w-full flex flex-col gap-6">
