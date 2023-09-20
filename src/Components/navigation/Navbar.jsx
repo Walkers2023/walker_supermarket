@@ -1,6 +1,6 @@
 import React from 'react'
 import { Logo } from '../../Assets/Assets'
-import {  HiChevronLeft, HiOutlineCalendar, HiOutlineLocationMarker, HiOutlineLogout, HiOutlineUser, HiOutlineUserGroup, } from "react-icons/hi"
+import {  HiOutlineUser, HiOutlineShoppingCart } from "react-icons/hi"
 import { NavLink } from 'react-router-dom'
 
 //this component is not responsive for mobile
@@ -16,7 +16,7 @@ const Navbar = () => {
         </a>
         <nav className='flex gap-80 font-poppins'>
           <div className='flex'>
-            <ul className='flex gap-6 font-semibold'>
+            <section className='flex gap-6 font-semibold'>
 
               <NavLink
                   to='/home'                  
@@ -47,10 +47,10 @@ const Navbar = () => {
               >
                 <div className='hover:bg-slate-400 p-4'>Contact Us</div>
               </NavLink>
-            </ul>
+            </section>
           </div>
           <div>
-            <ul className='flex gap-6 font-semibold'>
+            <section className='flex gap-6 font-semibold'>
               
               <NavLink
                   to='/'                  
@@ -58,11 +58,11 @@ const Navbar = () => {
                 <div className='text-lg font-medium p-4 hover:bg-slate-400'>< HiOutlineUser/></div>
               </NavLink>
 
+              {/* <li className='hover:bg-slate-400 p-4'><button>icon</button></li>
               <li className='hover:bg-slate-400 p-4'><button>icon</button></li>
               <li className='hover:bg-slate-400 p-4'><button>icon</button></li>
-              <li className='hover:bg-slate-400 p-4'><button>icon</button></li>
-              <li className='hover:bg-slate-400 p-4'><button>icon</button></li>
-            </ul>
+              <li className='hover:bg-slate-400 p-4'><button>icon</button></li> */}
+            </section>
           </div>
         </nav>
       </section>
