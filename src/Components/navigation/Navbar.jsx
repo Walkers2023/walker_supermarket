@@ -1,26 +1,8 @@
 import React from 'react'
-import { Logo, Pl1 } from '../../Assets/Assets'
-import { Link, NavLink } from 'react-router-dom'
+import { Logo } from '../../Assets/Assets'
+import { NavLink } from 'react-router-dom'
 
-// const Navbar = () => {
-//   return (
-//     <header className=' box-border h-24 w-full'>
-//       <section className=' bg-primary w-full h-10'></section>
-//       <section className=' bg-white w-full h-14 flex flex-row items-center justify-between px-10 gap-10 '>
-//       {/* Brand Logo */}
-//         <a href='https://walkerssupermarket.co.uk/' className=' w-120 h-46'>
-//           <img src={Logo} alt='Walker Supermarket' className=' object-contain w-full h-full'/>
-//         </a>
-//         {/* Placeholder Navigation Bar */}
-//         <div className=' w-full  h-max flex items-center justify-end '>
-//           <img src= {Pl1} alt='Just a Placeholder' className=' object-contain w-full h-full' />
-//         </div>
-//       </section>
-//     </header>
-//   )
-// }
-
-// export default Navbar
+//this component is not responsive for mobile
 
 const Navbar = () => {
   return (
@@ -31,25 +13,44 @@ const Navbar = () => {
         <a href='https://walkerssupermarket.co.uk/' className='h-16'>
           <img src={Logo} alt='Walker Supermarket' className='object-contain w-full h-full'/>
         </a>
-        {/* Placeholder Navigation Bar */}
-        {/* <div className=' w-full  h-max flex items-center justify-end '>
-          <img src= {Pl1} alt='Just a Placeholder' className=' object-contain w-full h-full' />
-        </div> */}
         <nav className='flex gap-80 font-poppins'>
           <div className='flex'>
             <ul className='flex gap-6 font-semibold'>
-              {/* <NavLink
-                  to='/HomePage'
-                  key='1'
-              >
-                <li className='hover:bg-slate-400 p-4'>Home</li>
-              </NavLink> */}
 
-            
-              <li className='hover:bg-slate-400 p-4'><button>Shop</button></li>
+              <NavLink
+                  to='/home'                  
+              >
+                <div className='hover:bg-slate-400 p-4'>Home</div>
+              </NavLink>
+
+              <NavLink
+                  to='/Shop'                  
+              >
+                <div className='hover:bg-slate-400 p-4'>Shop</div>
+              </NavLink>
+
+              <NavLink
+                  to='/BritishBrands'                  
+              >
+                <div className='hover:bg-slate-400 p-4'>British Brands</div>
+              </NavLink>
+
+              <NavLink
+                  to='/SubscriptionAndRewards'                  
+              >
+                <div className='hover:bg-slate-400 p-4'>Subscription and Rewards</div>
+              </NavLink>
+
+              <NavLink
+                  to='/ContactUs'                  
+              >
+                <div className='hover:bg-slate-400 p-4'>Contact Us</div>
+              </NavLink>
+
+              {/* <li className='hover:bg-slate-400 p-4'><button>Shop</button></li>
               <li className='hover:bg-slate-400 p-4'><button>British Brands</button></li>
               <li className='hover:bg-slate-400 p-4'><button>Subscription and Rewards</button></li>
-              <li className='hover:bg-slate-400 p-4'><button>Contact Us</button></li>
+              <li className='hover:bg-slate-400 p-4'><button>Contact Us</button></li> */}
             </ul>
           </div>
           <div>
