@@ -38,10 +38,14 @@ const Navbar = () => {
         <nav className='flex gap-80 font-poppins'>
           <div className='flex'>
             <ul className='flex gap-6 font-semibold'>
-            <NavLink>
+              {/* <NavLink
+                  to='/HomePage'
+                  key='1'
+              >
+                <li className='hover:bg-slate-400 p-4'>Home</li>
+              </NavLink> */}
 
-              <li className='hover:bg-slate-400 p-4' ><button>Home</button></li>
-            </NavLink>
+            
               <li className='hover:bg-slate-400 p-4'><button>Shop</button></li>
               <li className='hover:bg-slate-400 p-4'><button>British Brands</button></li>
               <li className='hover:bg-slate-400 p-4'><button>Subscription and Rewards</button></li>

@@ -3,7 +3,7 @@ export {default as Address} from "./Address"
 export {default as Mealplanner} from "./MealPlanner"
 export {default as Health} from "./Health"
 export {default as Community} from "./Community"
-export {default as Home} from "./HomePage"
+export {default as HomePage} from "./HomePage"
 //path for nav bar
 //need to create the pages into the pages folder for every nav bar section
 // export {default as Home} from "./Home"

@@ -48,7 +48,7 @@ const Sidebar = ({children}) => {
                         <HiChevronLeft fontSize={"50px"} />
                     </div>
                 </section>
-                <section className=' flex w-full h-full flex-col justify-between gap-5  items-start self-stretch'>
+                <section className='flex flex-col space-y-20'>
                     {
                         MenuItem.map((item, index) => (
                             <NavLink
