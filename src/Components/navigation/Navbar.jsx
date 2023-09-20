@@ -1,5 +1,6 @@
 import React from 'react'
 import { Logo } from '../../Assets/Assets'
+import {  HiChevronLeft, HiOutlineCalendar, HiOutlineLocationMarker, HiOutlineLogout, HiOutlineUser, HiOutlineUserGroup, } from "react-icons/hi"
 import { NavLink } from 'react-router-dom'
 
 //this component is not responsive for mobile
@@ -46,15 +47,17 @@ const Navbar = () => {
               >
                 <div className='hover:bg-slate-400 p-4'>Contact Us</div>
               </NavLink>
-
-              {/* <li className='hover:bg-slate-400 p-4'><button>Shop</button></li>
-              <li className='hover:bg-slate-400 p-4'><button>British Brands</button></li>
-              <li className='hover:bg-slate-400 p-4'><button>Subscription and Rewards</button></li>
-              <li className='hover:bg-slate-400 p-4'><button>Contact Us</button></li> */}
             </ul>
           </div>
           <div>
             <ul className='flex gap-6 font-semibold'>
+              
+              <NavLink
+                  to='/'                  
+              >
+                <div className='text-lg font-medium p-4 hover:bg-slate-400'>< HiOutlineUser/></div>
+              </NavLink>
+
               <li className='hover:bg-slate-400 p-4'><button>icon</button></li>
               <li className='hover:bg-slate-400 p-4'><button>icon</button></li>
               <li className='hover:bg-slate-400 p-4'><button>icon</button></li>

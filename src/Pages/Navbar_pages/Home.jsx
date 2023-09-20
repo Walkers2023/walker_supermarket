@@ -2,11 +2,11 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <section className=''>
+    <section className='flex justify-center'>
       {/* Summary of the Page */}
       <div >
         <p>
-          this is the home page
+          this is the home page 
         </p>
       </div>
     </section>

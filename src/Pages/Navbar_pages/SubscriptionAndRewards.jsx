@@ -2,7 +2,7 @@ import React from 'react'
 
 const SubscriptionAndRewards = () => {
   return (
-    <section className=''>
+    <section className='flex justify-center'>
       {/* Summary of the Page */}
       <div >
         <p>

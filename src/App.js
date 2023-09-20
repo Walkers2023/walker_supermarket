@@ -8,26 +8,26 @@ import {Home, Shop, BritishBrands, SubscriptionAndRewards, ContactUs } from './P
 function App() {
   return (
     <div className=' relative max-h-screen box-border '>
-    <BrowserRouter >
-      <NavBar/>
-        <Routes>
-          <Route path='/home' element={<Home />} />
-          <Route path='/Shop' element={<Shop />} />
-          <Route path='/BritishBrands' element={<BritishBrands />} />
-          <Route path='/SubscriptionAndRewards' element={<SubscriptionAndRewards />} />
-          <Route path='/ContactUs' element={<ContactUs />} />
-        </Routes>
-      <Sidebar>
-        <Routes>
-          <Route path='/' element={<Account/>} />
-          <Route path='/address' element={<Address/>} />
-          <Route path='/health' element={<Health/>} />
-          <Route path='/meal_planner' element={<Mealplanner/>} />
-          <Route path='/community' element={<Community/>} />
-        </Routes>
-      </Sidebar>
-      <BottomNav/>
-    </BrowserRouter>
+      <BrowserRouter >
+        <NavBar/>
+          <Routes>
+            <Route path='/home' element={<Home />} />
+            <Route path='/Shop' element={<Shop />} />
+            <Route path='/BritishBrands' element={<BritishBrands />} />
+            <Route path='/SubscriptionAndRewards' element={<SubscriptionAndRewards />} />
+            <Route path='/ContactUs' element={<ContactUs />} />
+          </Routes>
+        <Sidebar>
+          <Routes>
+            <Route path='/' element={<Account/>} />
+            <Route path='/address' element={<Address/>} />
+            <Route path='/health' element={<Health/>} />
+            <Route path='/meal_planner' element={<Mealplanner/>} />
+            <Route path='/community' element={<Community/>} />
+          </Routes>
+        </Sidebar>
+        <BottomNav/>
+      </BrowserRouter>
     </div>
   );
 }
