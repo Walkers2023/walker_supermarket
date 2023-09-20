@@ -7,6 +7,29 @@ import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   
+  const navBarElement = [
+    {
+      path: "/home",
+      name: 'Home'
+    },
+    {
+      path: "/shop",
+      name: 'Shops'
+    },
+    {
+      path: "/BritishBrands",
+      name: 'British Brands'
+    },
+    {
+      path: "/SubscriptionAndRewards",
+      name: 'Subscription and Rewards'
+    },
+    {
+      path: "/ContactUs",
+      name: 'Contact Us'
+    },
+    
+  ]
 
 
   const icons = [
@@ -40,13 +63,21 @@ const Navbar = () => {
           <div className='flex'>
             <section className='flex gap-6 font-semibold'>
 
-              <NavLink
-                  to='/home'                  
-              >
-                <div className='hover:bg-slate-400 p-4'>Home</div>
-              </NavLink>
+              {
+                navBarElement.map((item, index) => (
 
-              <NavLink
+                <NavLink
+                    to={item.path}  
+                    key={index}                
+                >
+                  <div className='hover:bg-slate-400 p-4'>{item.name}</div>
+                </NavLink>
+                  )
+                )
+              }
+
+
+              {/* <NavLink
                   to='/Shop'                  
               >
                 <div className='hover:bg-slate-400 p-4'>Shop</div>
@@ -68,7 +99,7 @@ const Navbar = () => {
                   to='/ContactUs'                  
               >
                 <div className='hover:bg-slate-400 p-4'>Contact Us</div>
-              </NavLink>
+              </NavLink> */}
             </section>
           </div>
           <div>
