@@ -1,5 +1,4 @@
-This is the link to the figma 
-https://www.figma.com/file/LINwDqsYjMOvbO5PUmj3K4/Wallker-Supermarket-Dashboard?type=design&node-id=0%3A1&mode=design&t=2m49q49WJJr8vzR9-1
+Link to figma design: https://www.figma.com/file/LINwDqsYjMOvbO5PUmj3K4/Wallker-Supermarket-Dashboard?type=design&node-id=0%3A1&mode=design&t=2m49q49WJJr8vzR9-1
 
 # Getting Started with Create React App
 

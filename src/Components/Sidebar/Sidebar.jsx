@@ -1,5 +1,6 @@
 import {React, useState} from 'react'
-import {  HiChevronLeft, HiOutlineCalendar, HiOutlineLocationMarker, HiOutlineLogout, HiOutlineUser, HiOutlineUserGroup, } from "react-icons/hi"
+import {  HiChevronLeft, HiOutlineCalendar, HiOutlineLocationMarker, HiOutlineLogout, HiOutlineUser, HiOutlineUserGroup,  } from "react-icons/hi"
+import { LuHistory } from 'react-icons/lu'
 import { BsHeartPulse } from "react-icons/bs"
 import { Link, NavLink } from 'react-router-dom'
 
@@ -32,6 +33,11 @@ const Sidebar = ({children}) => {
             icon: < HiOutlineCalendar/>
         },
         {
+            path: "/orderHistory",
+            name: "Order History",
+            icon: < LuHistory/>
+        },
+        {
             path: "/community",
             name: "Communities",
             icon: < HiOutlineUserGroup />
@@ -48,7 +54,7 @@ const Sidebar = ({children}) => {
                         <HiChevronLeft fontSize={"50px"} />
                     </div>
                 </section>
-                <section className='flex flex-col space-y-20'>
+                <section className='flex flex-col space-y-16'>
                     {
                         MenuItem.map((item, index) => (
                             <NavLink

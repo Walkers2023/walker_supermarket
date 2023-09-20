@@ -5,6 +5,7 @@ export {default as Address} from "./Address"
 export {default as Mealplanner} from "./MealPlanner"
 export {default as Health} from "./Health"
 export {default as Community} from "./Community"
+export {default as OrderHistory} from "./OrderHistory"
 
 
 //paths for nav bar pages 
