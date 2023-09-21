@@ -18,8 +18,8 @@ export {default as ContactUs} from "./Navbar_pages/ContactUs"
 
 //icons paths
 
-// export {default as Account} from "./Account"
-// export {default as Account} from "./Account"
-// export {default as Account} from "./Account"
-// export {default as Account} from "./Account"
+export {default as Search} from "./Navbar_pages/Search"
+//export {default as Account} from "./Navbar_pages/Account"
+export {default as Heart} from "./Navbar_pages/Heart"
+export {default as Cart} from "./Navbar_pages/Cart"
 

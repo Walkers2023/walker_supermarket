@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route} from "react-router-dom"
 import { BottomNav, NavBar, Sidebar } from './Components/Components';
 
 import { Account, Address, Community, Health, OrderHistory,  Mealplanner } from './Pages/Page';
-import {Home, Shop, BritishBrands, SubscriptionAndRewards, ContactUs } from './Pages/Page'
+import {Home, Shop, BritishBrands, SubscriptionAndRewards, ContactUs, Search, Heart, Cart } from './Pages/Page'
 
 function App() {
   return (
@@ -16,6 +16,10 @@ function App() {
             <Route path='/BritishBrands' element={<BritishBrands />} />
             <Route path='/SubscriptionAndRewards' element={<SubscriptionAndRewards />} />
             <Route path='/ContactUs' element={<ContactUs />} />
+            <Route path='/Search' element={<Search />} />
+            <Route path='/Account' element={<Account />} />
+            <Route path='/Heart' element={<Heart />} />
+            <Route path='/Cart' element={<Cart />} />
           </Routes>
         <Sidebar>
           <Routes>

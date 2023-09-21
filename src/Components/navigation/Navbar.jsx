@@ -34,19 +34,19 @@ const Navbar = () => {
 
   const icons = [
     {
-      path: "/",
+      path: "/Search",
       icon: < HiOutlineSearch/>
     },
     {
-      path: "/",
+      path: "/Account",
       icon: < HiOutlineUser/>
     },
     {
-      path: "/",
+      path: "/Heart",
       icon: < HiOutlineHeart/>
     },
     {
-      path: "/",
+      path: "/Cart",
       icon: < HiOutlineShoppingCart/>
     }
   ]
@@ -61,8 +61,8 @@ const Navbar = () => {
         </a>
         <nav className='flex gap-80 font-poppins'>
           <div className='flex'>
-            <section className='flex gap-6 font-semibold'>
 
+            <section className='flex gap-6 font-semibold'>
               {
                 navBarElement.map((item, index) => (
 
@@ -70,41 +70,17 @@ const Navbar = () => {
                     to={item.path}  
                     key={index}                
                 >
-                  <div className='hover:bg-slate-400 p-4'>{item.name}</div>
+                  <div className='hover:bg-slate-400 p-4 rounded-md'>{item.name}</div>
                 </NavLink>
                   )
                 )
               }
-
-
-              {/* <NavLink
-                  to='/Shop'                  
-              >
-                <div className='hover:bg-slate-400 p-4'>Shop</div>
-              </NavLink>
-
-              <NavLink
-                  to='/BritishBrands'                  
-              >
-                <div className='hover:bg-slate-400 p-4'>British Brands</div>
-              </NavLink>
-
-              <NavLink
-                  to='/SubscriptionAndRewards'                  
-              >
-                <div className='hover:bg-slate-400 p-4'>Subscription and Rewards</div>
-              </NavLink>
-
-              <NavLink
-                  to='/ContactUs'                  
-              >
-                <div className='hover:bg-slate-400 p-4'>Contact Us</div>
-              </NavLink> */}
             </section>
+
           </div>
           <div>
-            <section className='flex gap-6 font-semibold'>
 
+            <section className='flex gap-6 font-semibold'>
               {
                 icons.map((item, index) => (
 
@@ -112,17 +88,12 @@ const Navbar = () => {
                       to={item.path}
                       key={index}                  
                   >
-                    <div className='text-lg font-medium p-4 hover:bg-slate-400'>{item.icon}</div>
+                    <div className='text-lg font-medium p-4 hover:bg-slate-400 rounded-md'>{item.icon}</div>
                   </NavLink>
                 ))
               }
-              
-
-              {/* <li className='hover:bg-slate-400 p-4'><button>icon</button></li>
-              <li className='hover:bg-slate-400 p-4'><button>icon</button></li>
-              <li className='hover:bg-slate-400 p-4'><button>icon</button></li>
-              <li className='hover:bg-slate-400 p-4'><button>icon</button></li> */}
             </section>
+
           </div>
         </nav>
       </section>
