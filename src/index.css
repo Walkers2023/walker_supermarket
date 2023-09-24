@@ -4,49 +4,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 /* Custom css */
-.main-container{
-    @apply box-border w-screen h-full font-poppins mt-5 items-start flex md:flex-row flex-col md:gap-6 lg:gap-10
+.main-container {
+  @apply box-border w-screen h-full font-poppins mt-5 items-start flex md:flex-row flex-col md:gap-6 lg:gap-10;
 }
 
-.open-close{
-    @apply bg-primary w-10 h-10 text-2xl flex items-center justify-center rounded-full absolute top-10 -right-5 cursor-pointer
+.open-close {
+  @apply bg-primary w-10 h-10 text-2xl flex items-center justify-center rounded-full absolute top-10 -right-5 cursor-pointer;
 }
 
-.sidebar{
-    @apply h-[85vh] sticky left-0 z-10 bg-secondary hidden md:flex flex-col rounded-r-[20px] gap-5 justify-between text-white
+.sidebar {
+  @apply relative z-10 bg-secondary hidden md:flex flex-col gap-[2rem] rounded-r-[20px] justify-between text-white shadow-lg;
 }
 
-.label{
-    @apply  text-textColor  opacity-75 cursor-text peer-focus:text-xs peer-focus:text-secondary peer-focus:top-[2px] peer-focus:opacity-100 transition-all duration-500 absolute left-5 top-5
+.label {
+  @apply text-textColor  opacity-75 cursor-text peer-focus:text-xs peer-focus:text-secondary peer-focus:top-[2px] peer-focus:opacity-100 transition-all duration-500 absolute left-5 top-5;
 }
 
-.input{
-    @apply   text-textColor h-50 shadow-custom bg-white border-transparent border-b px-5 py-2.5 focus:border-secondary focus:border-b-2 transition-colors duration-500
+.input {
+  @apply text-textColor h-50 bg-white border-[1.5px] border-[#CFCFCF] focus:border-black rounded-lg px-5 py-2.5 transition-colors duration-300;
 }
 
-.text_area{
-    @apply w-full h-260
+.text_area {
+  @apply w-full h-260;
 }
 
-.add-btn{
-    @apply bg-secondary h-50 flex items-center text-white justify-center hover:scale-110 transition-all delay-100 duration-300
+.add-btn {
+  @apply bg-secondary h-50 flex items-center text-white justify-center hover:scale-110 transition-all delay-100 duration-300;
 }
 
-input:not(:placeholder-shown) + label{
-    @apply text-xs text-secondary top-[2px] opacity-100
+input:not(:placeholder-shown) + label {
+  @apply text-xs text-secondary top-[2px] opacity-100;
 }
 
 .select {
-    @apply relative appearance-none bg-white outline-none border-none focus:border-none focus:outline-none shadow-custom h-50 px-5 flex items-center justify-between
+  @apply relative appearance-none bg-white border-[1.5px] border-[#CFCFCF] rounded-lg h-50 px-5 flex items-center justify-between;
 }
 
 input:focus,
 select:focus,
 textarea:focus,
-button:focus{
-    outline: none;
+button:focus {
+  outline: none;
 }
 
-.select-arrow{
-    background: url("https://i.ibb.co/fCsFTVL/icn-dropdown-chevron.png") no-repeat;
+.select-arrow {
+  background: url("https://i.ibb.co/fCsFTVL/icn-dropdown-chevron.png") no-repeat;
 }

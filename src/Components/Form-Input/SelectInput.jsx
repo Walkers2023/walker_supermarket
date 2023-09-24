@@ -1,30 +1,42 @@
-import React from 'react'
+import React from "react";
+import dropDownImg from "../../Assets/icons/arrow-down.svg";
 
-
-const SelectInput = ({className, placeholder, options, handleChange, value}) => {
-
+const SelectInput = ({
+  label,
+  className,
+  placeholder,
+  options,
+  handleChange,
+  value,
+}) => {
   return (
-    <div className=' w-full relative'>
-        <select
+    <div className="w-full relative">
+      <p className="pb-[0.5rem] font-bold text-[0.9rem]">{placeholder}</p>
+
+      <select
         value={value}
         onChange={handleChange}
-        className ={`${className} `}
+        className={`${className} cursor-pointer text-sm `}
         placeholder={placeholder}
         required
       >
-        {options.map((option)=>(
-                <option
-                  key={option.value}
-                  className={` text-textColor text-base font-normal`}
-                  value={option.value}
-                >
-                  {option.label}
-                </option>
-            ))}
+        {options.map((option) => (
+          <option
+            key={option.value}
+            className={` text-textColor text-base font-normal `}
+            value={option.value}
+          >
+            {option.label}
+          </option>
+        ))}
       </select>
-      <div className='select-arrow w-[15px] h-2 bg-contain absolute top-[45%]  right-3 '/>
+      <img
+        src={dropDownImg}
+        alt="drop-down"
+        className=" h-[13px] md:h-[14px] bg-contain absolute bottom-[1.4rem] right-[1.5rem] "
+      />
     </div>
-  )
-}
+  );
+};
 
-export default SelectInput
+export default SelectInput;
