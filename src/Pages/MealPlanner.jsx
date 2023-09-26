@@ -52,8 +52,8 @@ const MealPlanner = () => {
   // AddMeal Function
   const addBtnFunc = (e, mealData) => {
     e.preventDefault();
-    setMealData(!mealData);
-    //  let data = Object.values(mealData)
+    //setMealData(!mealData);
+    //let data = Object.values(mealData)
 
     console.log(mealData);
     //  localStorage.setItem(mealData.day, JSON.stringify(mealData));
@@ -67,6 +67,7 @@ const MealPlanner = () => {
   return (
     <section className=" overflow-y-auto w-full h-[90vh] bg-white flex flex-col gap-5 items-center p-4 md:p-[5px] md:pr-5 mb-20 ">
       {/* Top container */}
+
       <form className=" w-full xl:h-100 bg-white shadow-custom items-center flex flex-row flex-wrap xl:gap-10 gap-5 justify-center px-5 md:py-[10px] py-5">
         {/* Selection section */}
         <div className=" z-30 flex flex-col md:flex-row justify-center xl:gap-8 gap-5 ">
@@ -136,8 +137,7 @@ const MealPlanner = () => {
         </div>
         {/* Note section */}
         <div className=" w-full h-360 shadow-custom bg-white ">
-          OLOKODANA
-          {/* <TextBox/> */}
+          <TextBox/> 
         </div>
         {/* Buttons */}
         <div className=" w-[500px] h-fit px-2.5 flex flex-row items-center self-center justify-between ">
