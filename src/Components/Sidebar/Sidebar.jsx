@@ -1,7 +1,7 @@
 import { LuHistory } from 'react-icons/lu'
 import { React, useState } from "react";
 import {
-  HiChevronLeft,
+  // HiChevronLeft,
   HiOutlineCalendar,
   HiOutlineLocationMarker,
   HiOutlineLogout,
@@ -56,24 +56,21 @@ const Sidebar = ({ children }) => {
 
       {/* Desktop and tablet Screen */}
       <aside
-        className={`sidebar ${
-          open
+        className={`sidebar ${open
             ? " w-300 px-3 py-10 transform duration-200"
             : " w-20 px-3 py-10 transform duration-200"
-        }`}
+          }`}
       >
         <section className=" w-full h-10 ">
           <h3
-            className={`w-full h-10 px-5 py-[10px] flex gap-5 flex-row items-center rounded-lg text-lg font-semibold ${
-              !open && " hidden"
-            } duration-200 `}
+            className={`w-full h-10 px-5 py-[10px] flex gap-5 flex-row items-center rounded-lg text-lg font-semibold ${!open && " hidden"
+              } duration-200 `}
           >
             Hello, User
           </h3>
           <div
-            className={`open-close rotate-180 ${
-              !open && "transform rotate-[360deg] duration-200"
-            }`}
+            className={`open-close rotate-180 ${!open && "transform rotate-[360deg] duration-200"
+              }`}
             onClick={() => setOpen(!open)}
           >
             {/* <HiChevronLeft fontSize={"50px"} /> */}
@@ -87,19 +84,16 @@ const Sidebar = ({ children }) => {
               key={index}
               className={({ isActive }) =>
                 isActive
-                  ? `bg-white text-secondary w-full h-10 flex flex-row items-center rounded-lg ${
-                      !open ? " justify-center" : " px-4 py-[10px] gap-4 "
-                    }`
-                  : `hover:bg-gray w-full h-10 flex gap-4 flex-row items-center rounded-lg ease-in-out duration-300 transition delay-150 ${
-                      !open ? " justify-center" : " px-4 py-[10px] gap-4 "
-                    }`
+                  ? `bg-white text-secondary w-full h-10 flex flex-row items-center rounded-lg ${!open ? " justify-center" : " px-4 py-[10px] gap-4 "
+                  }`
+                  : `hover:bg-gray w-full h-10 flex gap-4 flex-row items-center rounded-lg ease-in-out duration-300 transition delay-150 ${!open ? " justify-center" : " px-4 py-[10px] gap-4 "
+                  }`
               }
             >
               <div className=" text-lg font-medium ">{item.icon}</div>
               <div
-                className={`${
-                  !open && " hidden"
-                } duration-200 text-lg font-medium`}
+                className={`${!open && " hidden"
+                  } duration-200 text-lg font-medium`}
               >
                 {item.name}
               </div>
@@ -108,9 +102,8 @@ const Sidebar = ({ children }) => {
         </section>
         <section className=" w-full h-fit">
           <Link
-            className={` mt-3 ${
-              !open ? " justify-center" : "px-5 py-[10px] gap-5 "
-            } w-full h-10 rounded-lg hover:bg-gray ease-in-out duration-300 transition delay-150 text-lg font-medium flex flex-row items-center`}
+            className={` mt-3 ${!open ? " justify-center" : "px-5 py-[10px] gap-5 "
+              } w-full h-10 rounded-lg hover:bg-gray ease-in-out duration-300 transition delay-150 text-lg font-medium flex flex-row items-center`}
           >
             <div className="">
               <HiOutlineLogout />
