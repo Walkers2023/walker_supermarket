@@ -4,9 +4,9 @@ const Search = () => {
   return (
     <section className='flex justify-center'>
       {/* Summary of the Page */}
-      <div >
-        <input />        
-      </div>
+        <input
+          type="text"
+        />    
     </section>
   )
 }
