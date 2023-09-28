@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import { Button, Input, Select } from "../Components/Components";
-import { HiPlus } from "react-icons/hi";
+import DOMPurify from "dompurify";
+import { anaemiaHtml } from "../articles/anaemiaHtml";
 
 const Health = () => {
-  // Testing branch
   const [healthData, setHealthData] = useState({});
   const [otherCondition, setOtherCondition] = useState({});
 
   const conditions = [
-    { value: "", label: "Select your Health Condition*" },
+    { value: "", label: "Select Health Condition*" },
+    { value: "Anaemia", label: "Anaemia" },
     { value: "Anti-Inflammatory", label: "Anti-Inflammatory" },
     { value: "Type 2 Diabetes", label: "Type 2 Diabetes" },
     { value: "Lupus", label: "Lupus" },
     { value: "High Blood Pressure", label: "High Blood Pressure" },
     { value: "Others", label: "Others" },
   ];
+  const sanitizedHTML = DOMPurify.sanitize(anaemiaHtml);
 
   // Functions
   const handleChange = (e, name) => {
@@ -54,17 +56,16 @@ const Health = () => {
   };
 
   return (
-    <section className=" overflow-y-auto w-full h-[90vh] bg-white flex flex-col gap-5 items-center p-4 md:p-[5px] md:pr-5 mb-20 ">
+    <section className="overflow-y-auto w-full bg-white flex flex-col gap-[1.5rem] items-center p-4 md:p-[5px] md:pr-5 mb-20 ">
       {/* Top container */}
-      <form className=" w-full xl:h-100 bg-white shadow-custom items-center flex flex-row flex-wrap xl:gap-10  gap-[30px] xl:justify-center md:justify-center justify-center px-5 md:py-[10px] py-5">
+      <form className="w-full pt-[1rem] pb-[1.5rem] bg-white md:border-[1px] border-[#cfcfcf] md:shadow-header-shadow items-center flex flex-row gap-[1rem] flexwrap justify-center rounded-md">
         {/* Selection section */}
-        <div className=" z-30 flex md:flex-row justify-center flex-wrap xl:gap-10 gap-[30px] ">
+        <div className=" z-30 flex md:flex-row justify-center flex-wrap ">
           <Select
-            className={`select w-full md:w-360 ${
+            className={`select w-[240px] md:w-300 lg:w-360 ${
               !conditions && "text-textColor"
             } `}
             options={conditions}
-            placeholder={` Health `}
             id={`Health`}
             value={healthData.condition}
             handleChange={(e) => handleChange(e, "health")}
@@ -73,17 +74,15 @@ const Health = () => {
         {/* Input and Button Section */}
         <div className=" flex lg:flex-row justify-center  flex-wrap xl:gap-10 gap-[30px]">
           <Button
-            className={` add-btn `}
-            type={` submit `}
-            text={
-              <HiPlus size={30} className=" xl:w-40 w-32 rounded-[10px] " />
-            }
+            className={`btn-grad h-full`}
+            type={`submit`}
+            text="SAVE"
             btnClickFunc={(e) => addBtnFunc(e, healthData)}
           />
         </div>
       </form>
       {/* Bottom Section */}
-      <div className="w-full shadow-custom h-full bg-white flex flex-col gap-5 p-2.5">
+      <div className="w-full shadow-header-shadow border-[1px] border-[#cfcfcf] h-full bg-white flex flex-col gap-5 p-2.5 min-h-[45vh] md:min-h-[50vh] mb-[1rem] rounded-md">
         {healthData.health === "Others" ? (
           <form
             onSubmit={``}
@@ -111,7 +110,12 @@ const Health = () => {
             </div>
           </form>
         ) : (
-          <div className="">{healthData.health}</div>
+          <div
+            className="text-[2rem] px-[1rem]"
+            dangerouslySetInnerHTML={{ __html: sanitizedHTML }}
+          >
+            {/* {healthData.health} */}
+          </div>
         )}
       </div>
 

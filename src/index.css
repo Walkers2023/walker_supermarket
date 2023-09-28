@@ -17,11 +17,11 @@
 }
 
 .label {
-  @apply text-textColor  opacity-75 cursor-text peer-focus:text-xs peer-focus:text-secondary peer-focus:top-[2px] peer-focus:opacity-100 transition-all duration-500 absolute left-5 top-5;
+  @apply text-textColor opacity-75 cursor-text peer-focus:text-xs peer-focus:text-secondary peer-focus:top-[2px] peer-focus:opacity-100 transition-all duration-500 absolute left-5 top-5;
 }
 
 .input {
-  @apply text-textColor h-50 bg-white border-[1.5px] border-[#CFCFCF] focus:border-black rounded-lg px-5 py-2.5 transition-colors duration-300;
+  @apply text-textColor h-50 bg-white border-[1.3px] border-[#CFCFCF] focus:border-black rounded-lg px-5 py-2.5 transition-colors duration-300;
 }
 
 .text_area {
@@ -37,7 +37,7 @@ input:not(:placeholder-shown) + label {
 }
 
 .select {
-  @apply relative appearance-none bg-white border-[1.5px] border-[#CFCFCF] rounded-lg h-50 px-5 flex items-center justify-between;
+  @apply relative appearance-none bg-white border-[1.3px] border-[#CFCFCF] rounded-lg h-50 px-5 flex items-center justify-between;
 }
 
 input:focus,
