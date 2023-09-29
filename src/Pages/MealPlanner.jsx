@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Button,
-  DailyMeal,
-  Input,
-  Select,
-  TextBox,
-} from "../Components/Components";
+import { Button, DailyMeal, Input, Select } from "../Components/Components";
 import { useState } from "react";
 import { HiChevronLeft, HiChevronRight, HiPlus } from "react-icons/hi";
 import { ShoppingList } from "../Features/Features";

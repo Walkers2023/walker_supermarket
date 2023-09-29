@@ -1,5 +1,5 @@
-export const anaemiaHtml = `
-<p style="margin-top:0pt; margin-bottom:20pt; line-height:125%;"><img src="/Walkers Logo.png" width="150" height="90" alt="Walkers Supermarket Logo" style="float: right; "><strong><u><span style="font-family:Poppins;font-weight:700;font-size:19pt;">ANAEMIA</span></u></strong></p>
+export const anaemia = `
+<p style="margin-top:0pt; margin-bottom:20pt; line-height:125%;"><img src="/Walkers Logo.png" width="150" height="90" alt="Walkers Supermarket Logo" style="float: right; "><strong><u><span style="font-family:Poppins;font-weight:700;font-size:18pt;">ANAEMIA</span></u></strong></p>
 <p style="margin-top:0pt; margin-bottom:8pt;  line-height:125%; font-size:12pt;"><strong><span style="font-family:Poppins;">What is it?</span></strong></p>
 <p style="margin-top:0pt; margin-bottom:8pt;  line-height:125%; font-size:12pt;"><span style="font-family:Poppins;">A condition caused by lack of red blood cells or haemoglobin for the body&rsquo;s needs. Red blood cells use haemoglobin to carry oxygen to your tissues and organs. Iron deficiency anaemia is the most common type.&nbsp;</span></p>
 <p style="margin-top:0pt; margin-bottom:8pt;  line-height:125%; font-size:12pt;"><strong><span style="font-family:Poppins;">Causes&nbsp;</span></strong></p>

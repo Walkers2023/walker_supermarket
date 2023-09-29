@@ -1,58 +1,58 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button, Input, Select } from "../Components/Components";
 import DOMPurify from "dompurify";
-import { anaemiaHtml } from "../articles/anaemiaHtml";
+import { anaemia } from "../articles/anaemia";
+import { antiInflammatory } from "../articles/antiInflammatory";
+import { diabetes } from "../articles/type-2-diabetes";
+import { lupus } from "../articles/lupus";
+import { highBp } from "../articles/high-blood-pressure";
 
 const Health = () => {
   const [healthData, setHealthData] = useState({});
+  const [htmlContent, setHtmlContent] = useState("");
   const [otherCondition, setOtherCondition] = useState({});
 
   const conditions = [
     { value: "", label: "Select Health Condition*" },
-    { value: "Anaemia", label: "Anaemia" },
-    { value: "Anti-Inflammatory", label: "Anti-Inflammatory" },
-    { value: "Type 2 Diabetes", label: "Type 2 Diabetes" },
-    { value: "Lupus", label: "Lupus" },
-    { value: "High Blood Pressure", label: "High Blood Pressure" },
+    { value: "Anaemia", label: "Anaemia", content: anaemia },
+    {
+      value: "Anti-Inflammatory",
+      label: "Anti-Inflammatory",
+      content: antiInflammatory,
+    },
+    { value: "Type 2 Diabetes", label: "Type 2 Diabetes", content: diabetes },
+    { value: "Lupus", label: "Lupus", content: lupus },
+    {
+      value: "High Blood Pressure",
+      label: "High Blood Pressure",
+      content: highBp,
+    },
     { value: "Others", label: "Others" },
   ];
-  const sanitizedHTML = DOMPurify.sanitize(anaemiaHtml);
+  const sanitizedHTML = DOMPurify.sanitize(htmlContent);
+  console.log(healthData);
 
-  // Functions
+  // FUNCTIONS
   const handleChange = (e, name) => {
-    setHealthData({
-      ...healthData,
-      [name]: e.target.value,
-    });
-  };
+    const selectedCondition = conditions.find(
+      (condition) => condition.value === name
+    );
 
-  // const addItem = (list)=>{
-  //   setLists(prevState => [
-  //     ...prevState, list
-  //   ]);
-  // }
-
-  // const handleFormSubmit = (e) =>{
-  //     e.preventDefault()
-  //     addItem({
-  //         name: otherCondition,
-  //         id: Date.now()
-  //     })
-  //     setOtherCondition("")
-  // }
-  // AddMeal Function
-  const addBtnFunc = (e, healthData) => {
-    e.preventDefault();
-    setHealthData(!healthData);
-    //  let data = Object.values(mealData)
-
-    console.log(healthData);
-    //  localStorage.setItem(mealData.day, JSON.stringify(mealData));
-    //  console.log(localStorage.getItem(mealData.day));
-    //  let storageProfileString = localStorage.getItem(mealData.day);
-    //  console.log("String saved in LocalStorage", storageProfileString);
-
-    //  console.log(data[0], data[1], data[2] )
+    if (selectedCondition) {
+      setHtmlContent(DOMPurify.sanitize(selectedCondition.content));
+      setHealthData({
+        ...healthData,
+        condition: name, // Update the 'condition' property
+        content: selectedCondition.content,
+      });
+    } else {
+      setHtmlContent(""); // Clear the HTML content if no valid condition is selected
+      setHealthData({
+        ...healthData,
+        condition: name, // Update the 'condition' property
+        content: "",
+      });
+    }
   };
 
   return (
@@ -62,34 +62,26 @@ const Health = () => {
         {/* Selection section */}
         <div className=" z-30 flex md:flex-row justify-center flex-wrap ">
           <Select
-            className={`select w-[240px] md:w-300 lg:w-360 ${
-              !conditions && "text-textColor"
-            } `}
+            className={`select w-[240px] md:w-300 lg:w-360`}
             options={conditions}
             id={`Health`}
             value={healthData.condition}
-            handleChange={(e) => handleChange(e, "health")}
+            handleChange={(e) => handleChange(e, e.target.value)}
           />
         </div>
         {/* Input and Button Section */}
         <div className=" flex lg:flex-row justify-center  flex-wrap xl:gap-10 gap-[30px]">
-          <Button
-            className={`btn-grad h-full`}
-            type={`submit`}
-            text="SAVE"
-            btnClickFunc={(e) => addBtnFunc(e, healthData)}
-          />
+          <Button className={`btn-grad h-full`} type={`submit`} text="SAVE" />
         </div>
       </form>
       {/* Bottom Section */}
       <div className="w-full shadow-header-shadow border-[1px] border-[#cfcfcf] h-full bg-white flex flex-col gap-5 p-2.5 min-h-[45vh] md:min-h-[50vh] mb-[1rem] rounded-md">
-        {healthData.health === "Others" ? (
+        {healthData.condition === "Others" ? (
           <form
             onSubmit={``}
             className=" w-full h-full flex flex-col gap-5 items-center justify-center"
           >
             <h1 className="">
-              {" "}
               Please Enter Your Health condition if it's not listed above
             </h1>
             <div className=" w-full h-fit flex flex-row gap-0 items-center justify-center">
@@ -111,11 +103,15 @@ const Health = () => {
           </form>
         ) : (
           <div
-            className="text-[2rem] px-[1rem]"
+            style={
+              {
+                // overflowX: "auto", // Enable horizontal scrolling if needed
+                // whiteSpace: "normal", // Allow text to wrap to the next line
+              }
+            }
+            className="text-[2rem] px-[1rem] pt-[2.5rem] pb-[1rem] flex flex-col gap-6 bg-white"
             dangerouslySetInnerHTML={{ __html: sanitizedHTML }}
-          >
-            {/* {healthData.health} */}
-          </div>
+          ></div>
         )}
       </div>
 
