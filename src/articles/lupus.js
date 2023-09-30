@@ -1,6 +1,6 @@
 export const lupus = `
 
-<p style="margin-top:0pt; margin-bottom:20pt; line-height:125%;"><img src="/Walkers Logo.png" width="150" height="90" alt="Walkers Supermarket Logo" style="float: right; "><strong><u><span style="font-family:Poppins;font-weight:700;font-size:18pt;">LUPUS</span></u></strong></p>
+<p style="margin-top:0pt; margin-bottom:20pt; line-height:125%;"><img src="/Walkers Logo.png" width="160" height="90" alt="Walkers Supermarket Logo" style="float: right; "><strong><u><span style="font-family:Poppins;font-weight:700;font-size:18pt;">LUPUS</span></u></strong></p>
 <p style="margin-top:0pt; margin-bottom:8pt; line-height:125%; font-size:12pt;"><strong><span style="font-family:Poppins;">What is it?</span></strong></p>
 <p style="margin-top:0pt; margin-bottom:8pt; line-height:125%; font-size:12pt;"><span style="font-family:Poppins;">Lupus is an autoimmune disease, which means the body&apos;s immune system attacks healthy parts of your body. It is more common in women than men, especially Black and Asian women.&nbsp;</span></p>
 <p style="margin-top:0pt; margin-bottom:8pt; line-height:125%; font-size:12pt;"><strong><span style="font-family:Poppins;">Lupus and Diet</span></strong></p>

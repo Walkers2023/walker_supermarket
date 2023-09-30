@@ -1,6 +1,6 @@
 export const diabetes = `
 
-<p style="margin-top:0pt; margin-bottom:20pt; line-height:125%;"><img src="/Walkers Logo.png" width="150" height="90" alt="Walkers Supermarket Logo" style="float: right; "><strong><u><span style="font-family:Poppins;font-weight:700;font-size:18pt;">TYPE 2 DIABETES</span></u></strong></p>
+<p style="margin-top:0pt; margin-bottom:20pt; line-height:125%;"><img src="/Walkers Logo.png" width="160" height="90" alt="Walkers Supermarket Logo" style="float: right; "><strong><u><span style="font-family:Poppins;font-weight:700;font-size:18pt;">TYPE 2 DIABETES</span></u></strong></p>
 <p style="margin-top:0pt; margin-bottom:8pt;  line-height:125%; font-size:12pt;"><strong><span style="font-family:Poppins;">What is it?</span></strong></p>
 <p style="margin-top:0pt; margin-bottom:8pt;  line-height:125%; font-size:12pt;"><span style="font-family:Poppins;">Type 2 is the most common type of diabetes. High blood sugar levels are caused by the body not making enough of the hormone insulin, or the insulin produced not working properly, known as insulin resistance.&nbsp;</span></p>
 <p style="margin-top:0pt; margin-bottom:8pt;  line-height:125%; font-size:12pt;"><span style="font-family:Poppins;">Most people do not get any signs or symptoms of type 2 diabetes &ndash; or do not notice them. Symptoms can include frequent urination (especially at night), intense thirst, fatigue and blurred vision.&nbsp;</span></p>

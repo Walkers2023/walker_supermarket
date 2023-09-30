@@ -13,7 +13,7 @@ const MealInput = ({
 }) => {
   return (
     <div className="relative w-full">
-      <p className="pb-[0.5rem] font-bold text-[0.9rem]">{label}</p>
+      <p className="pb-[0.5rem] font-semibold text-[0.85rem]">{label}</p>
       <input
         type={type}
         id={id}

@@ -1,6 +1,6 @@
 export const antiInflammatory = `
 
-<p style="margin-top:0pt; margin-bottom:20pt; line-height:125%;"><img src="/Walkers Logo.png" width="150" height="90" alt="Walkers Supermarket Logo" style="float: right; "><strong><u><span style="font-family:Poppins;font-weight:700;font-size:18pt;">ANTI-INFLAMMATORY</span></u></strong></p>
+<p style="margin-top:0pt; margin-bottom:20pt; line-height:125%;"><img src="/Walkers Logo.png" width="160" height="90" alt="Walkers Supermarket Logo" style="float: right; "><strong><u><span style="font-family:Poppins;font-weight:700;font-size:18pt;">ANTI-INFLAMMATORY</span></u></strong></p>
 <p style="margin-top:0pt; margin-bottom:8pt;; line-height:125%; font-size:12pt;"><strong><span style="font-family:Poppins;">What is inflammation?</span></strong></p>
 <p style="margin-top:0pt; margin-bottom:8pt;; line-height:125%; font-size:12pt;"><span style="font-family:Poppins;">Inflammation is your body&rsquo;s reaction to foreign substances. It occurs to protect your body but can have a negative impact on your health if it long-term. Chronic (long-term) inflammation occurs in several diseases, including arthritis and diabetes. You can help reduce inflammation by changing your diet, as certain foods and drinks contain anti-inflammatory substances.</span></p>
 <p style="margin-top:0pt; margin-bottom:8pt;; line-height:125%; font-size:12pt;"><strong><span style="font-family:Poppins;">What is an anti-inflammatory diet?</span></strong></p>

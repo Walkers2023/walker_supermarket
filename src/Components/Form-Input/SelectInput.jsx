@@ -11,7 +11,7 @@ const SelectInput = ({
 }) => {
   return (
     <div className="w-full relative">
-      <p className="pb-[0.5rem] font-bold text-[0.9rem]">{placeholder}</p>
+      <p className="pb-[0.5rem] font-semibold text-[0.85rem]">{placeholder}</p>
 
       <select
         value={value}

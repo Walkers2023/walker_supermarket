@@ -1,5 +1,5 @@
 export const highBp = `
-<p style="margin-top:0pt; margin-bottom:20pt; line-height:125%;"><img src="/Walkers Logo.png" width="150" height="90" alt="Walkers Supermarket Logo" style="float: right; "><strong><u><span style="font-family:Poppins;font-weight:700;font-size:18pt;">HIGH BLOOD PRESSURE</span></u></strong></p>
+<p style="margin-top:0pt; margin-bottom:20pt; line-height:125%;"><img src="/Walkers Logo.png" width="160" height="90" alt="Walkers Supermarket Logo" style="float: right; "><strong><u><span style="font-family:Poppins;font-weight:700;font-size:18pt;">HIGH BLOOD PRESSURE</span></u></strong></p>
 <p style="margin-top:0pt; margin-bottom:8pt; line-height:125%; font-size:12pt;"><strong><span style="font-family:Poppins;">What is it?</span></strong></p>
 <p style="margin-top:0pt; margin-bottom:8pt; line-height:125%; font-size:12pt;"><span style="font-family:Poppins;">Medically known as &lsquo;hypertension&rsquo;, and it means your blood pressure is always too high resulting in your heart working harder to pump blood around the body.</span><span style="font-family:Poppins;">&nbsp;&nbsp;</span></p>
 <p style="margin-top:0pt; margin-bottom:8pt; line-height:125%; font-size:12pt;"><strong><span style="font-family:Poppins;">Causes?</span></strong></p>

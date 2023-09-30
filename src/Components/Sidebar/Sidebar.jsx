@@ -28,15 +28,16 @@ const Sidebar = ({ children }) => {
       name: "Address",
       icon: <HiOutlineLocationMarker />,
     },
-    {
-      path: "/health",
-      name: "Health",
-      icon: <BsHeartPulse />,
-    },
+
     {
       path: "/meal_planner",
       name: "Meal Planner",
       icon: <HiOutlineCalendar />,
+    },
+    {
+      path: "/health",
+      name: "Health",
+      icon: <BsHeartPulse />,
     },
     {
       path: "/orderHistory",
