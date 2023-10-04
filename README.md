@@ -1,5 +1,7 @@
 Link to figma design: https://www.figma.com/file/LINwDqsYjMOvbO5PUmj3K4/Wallker-Supermarket-Dashboard?type=design&node-id=0%3A1&mode=design&t=2m49q49WJJr8vzR9-1
 
+Orgainsation: [Walker Supermarket](https://github.com/walkers-supermarket).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
