@@ -24,8 +24,8 @@ const CustomForm = ({className, addItem}) => {
         onSubmit={handleFormSubmit}
     >
         <div className=" w-full flex flex-row flex-nowrap h-fit mt-2.5">
-            <Input id=" item"
-                   label=" Item"
+            <Input 
+                   label="Item"
                    autoComplete="on"
                    type="text"
                    inputFunc={(event)=>setTask(event.target.value)}

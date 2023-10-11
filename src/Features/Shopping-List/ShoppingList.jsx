@@ -9,6 +9,11 @@ const ShoppingList = () => {
     setLists(prevState => [
       ...prevState, list
     ]);
+    //console.log(list)
+  }
+
+  const deleteItem = (id) => {
+    setLists((prevList) => prevList.filter((item) => item.id !== id))
   }
 
   return (
@@ -17,9 +22,9 @@ const ShoppingList = () => {
         <h1 className=" w-fit font-semibold text-lg "> Shopping List :</h1>
       </div>
       <div className="mx-0 h-full overflow-clip pb-5 relative px-2.5">
-        <Sform addItem={addItem} className={` sticky top-0`} />
+        <Sform addItem={addItem} className={`sticky top-0`} />
         <div className="mt-5 h-[240px] text-xl overflow-y-scroll">
-          {lists && < ListItems lists={lists} />}
+          {lists && < ListItems lists={lists} onClick={deleteItem} key={lists.id} />} 
         </div>
       </div>
     </div>

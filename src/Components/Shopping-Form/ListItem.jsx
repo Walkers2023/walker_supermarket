@@ -1,13 +1,21 @@
 import React, { useState } from 'react'
 import { HiOutlineCheck, HiOutlineMinus, HiOutlinePencil } from 'react-icons/hi'
 
-const ListItem = ({list}) => {
+const ListItem = ({list, onClick}) => {
 
     const [checked, setChecked] =useState(list.checked)
+
 
     const checkedFunc = (e) => {
         setChecked(!checked)
     }
+    
+    // Call the delete function with the item's ID
+    // const handleDelete = () => {
+    //     deleteItem(list.id)
+    //   }
+
+    console.log(list)
 
   return (
     <li className={` w-full  h-10 bg-secondary bg-opacity-30 text-secondary font-normal text-lg border-b-2 shadow-custom border-secondary justify-between gap-5 flex items-center px-2.5`}>
@@ -29,7 +37,7 @@ const ListItem = ({list}) => {
         </div>
         <div className=" flex gap-2.5 flex-row flex-nowrap">
             <button className=''><HiOutlinePencil/></button>
-            <button className=''><HiOutlineMinus/></button>
+            <button className=''><HiOutlineMinus id={list.id} onClick={() => onClick(list.id)}/></button>
         </div>
         
         
