@@ -1,18 +1,18 @@
 import React from "react";
-import {
-  Button,
-  DailyMeal,
-  Input,
-  Select,
-  TextBox,
-} from "../Components/Components";
+import { Button, DailyMeal, Input, Select, TextBox } from "../Components/Components";
 import { useState } from "react";
 import { HiChevronLeft, HiChevronRight, HiPlus } from "react-icons/hi";
 import { ShoppingList } from "../Features/Features";
 
 const MealPlanner = () => {
-  const [mealData, setMealData] = useState({});
+  const [mealData, setMealData] = useState({ 
+    day:"",
+    meal:"", 
+    food:""
+  });
+
   const [otherData, setOtherData] = useState({});
+
   const [noteData, setNoteData] = useState("");
 
   const days = [
@@ -35,12 +35,13 @@ const MealPlanner = () => {
   ];
 
   // Functions
-  const handleChange = (e, name) => {
+  const handleChange = (event, name) => {
     setMealData({
       ...mealData,
-      [name]: e.target.value,
-    });
-  };
+      [name]: event.target.value,
+    })
+  }
+
   const changeFunc = (e) => {
     // setOtherData({
     //   ...otherData,
@@ -77,7 +78,7 @@ const MealPlanner = () => {
             placeholder={` Day `}
             id={`Day`}
             value={mealData.day}
-            handleChange={(e) => handleChange(e, "day")}
+            handleChange={(event) => handleChange(event, "day")}
           />
 
           <Select
@@ -86,7 +87,7 @@ const MealPlanner = () => {
             placeholder={` Meal Time`}
             id={`Meal`}
             value={mealData.meal}
-            handleChange={(e) => handleChange(e, "meal")}
+            handleChange={(event) => handleChange(event, "meal")}
           />
         </div>
         {/* Input and Button Section */}
@@ -137,7 +138,7 @@ const MealPlanner = () => {
         </div>
         {/* Note section */}
         <div className=" w-full h-360 shadow-custom bg-white ">
-          <TextBox/> 
+          <TextBox /> 
         </div>
         {/* Buttons */}
         <div className=" w-[500px] h-fit px-2.5 flex flex-row items-center self-center justify-between ">

@@ -7,8 +7,8 @@ const CustomForm = ({className, addItem}) => {
     // States
     const [task, setTask] = useState("")
 
-    const handleFormSubmit = (e) =>{
-        e.preventDefault()
+    const handleFormSubmit = (event) =>{
+        event.preventDefault()
         addItem({
             name: task,
             checked: false,
@@ -25,12 +25,12 @@ const CustomForm = ({className, addItem}) => {
     >
         <div className=" w-full flex flex-row flex-nowrap h-fit mt-2.5">
             <Input id=" item"
-                    label=" Item"
-                    autoComplete="on"
-                    type="text"
-                    inputFunc={(e)=>setTask(e.target.value)}
-                    value={task}
-                    className={` h-50 w-full`}
+                   label=" Item"
+                   autoComplete="on"
+                   type="text"
+                   inputFunc={(event)=>setTask(event.target.value)}
+                   value={task}
+                   className={` h-50 w-full`}
                 />
                 <Button
                     text = {<HiPlus size={30}/>}
